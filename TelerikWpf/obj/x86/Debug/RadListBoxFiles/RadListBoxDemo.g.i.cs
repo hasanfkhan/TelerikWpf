@@ -32,6 +32,7 @@ using System.Windows.Shell;
 using Telerik.Windows.Controls;
 using Telerik.Windows.Controls.Animation;
 using Telerik.Windows.Controls.Behaviors;
+using Telerik.Windows.Controls.Data.PropertyGrid;
 using Telerik.Windows.Controls.DragDrop;
 using Telerik.Windows.Controls.Legend;
 using Telerik.Windows.Controls.Primitives;
