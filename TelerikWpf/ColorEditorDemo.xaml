@@ -1,0 +1,13 @@
+﻿<Window x:Class="TelerikWpf.ColorEditorDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        Title="ColorEditorDemo" Height="300" Width="300">
+    <Grid>
+        <StackPanel>
+            <TextBlock Name="TxtBlock" FontSize="20" FontWeight="ExtraBold" Text="Hello Telerik !"></TextBlock>
+            <telerik:RadColorEditor SelectedColorChanged="RadColorEditor_SelectedColorChanged" />
+        </StackPanel>
+        
+    </Grid>
+</Window>

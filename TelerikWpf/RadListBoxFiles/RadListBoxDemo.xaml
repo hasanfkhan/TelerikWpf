@@ -1,0 +1,32 @@
+﻿<Window x:Class="TelerikWpf.RadListBoxFiles.RadListBoxDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:local="clr-namespace:TelerikWpf.RadListBoxFiles"
+        Title="RadListBoxDemo" Height="350" Width="525">
+    <Window.Resources>
+        <local:AgencyViewModel x:Key="AgencyViewModel" />
+        <DataTemplate x:Key="ComboBoxCustomTemplate">
+            <Grid Margin="5" Width="350">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontWeight="Bold" Text="{Binding Name}" />
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Phone:" />
+                <TextBlock Grid.Row="1" Grid.Column="0" Foreground="Blue" Margin="40,0,0,0" Text="{Binding Phone}" />
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="Zip:" />
+                <TextBlock Grid.Row="1" Grid.Column="1" Foreground="Blue" Margin="26,0,0,0" Text="{Binding Zip}" />
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <telerik:RadListBox Width="200" Height="300" x:Name="RadComboBox" 
+                             ItemsSource="{Binding Source={StaticResource AgencyViewModel}, Path=Agencies}"
+                             ItemTemplate="{StaticResource ComboBoxCustomTemplate}"/>
+    </Grid>
+</Window>
